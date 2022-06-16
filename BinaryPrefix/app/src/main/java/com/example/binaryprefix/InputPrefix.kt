@@ -2,6 +2,7 @@ package com.example.binaryprefix
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
@@ -34,5 +35,9 @@ class InputPrefix : AppCompatActivity() {
             setResult(RESULT_OK,intent)
             finish()
         }
+        btn1.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in))
+        btn2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.slide_down))
+        btn3.startAnimation(AnimationUtils.loadAnimation(this, R.anim.move))
+        btn4.startAnimation(AnimationUtils.loadAnimation(this, R.anim.move))
     }
 }

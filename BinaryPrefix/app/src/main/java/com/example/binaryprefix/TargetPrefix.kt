@@ -9,8 +9,8 @@ class TargetPrefix : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_target_prefix)
-        val btn1=findViewById<Button>(R.id.button9)
-        val btn2=findViewById<Button>(R.id.button8)
+        val btn1=findViewById<Button>(R.id.button8)
+        val btn2=findViewById<Button>(R.id.button9)
         val btn3=findViewById<Button>(R.id.button10)
         val btn4=findViewById<Button>(R.id.button11)
         val intent= Intent()
