@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
                 Log.v("test",rates.getDouble(currency_list[p2]).toString())
                 txtoutput.text=(txtinput.text.toString().toDouble()
                 *  rates.getDouble(currency_list[p2])).toString()+" "+currency_list[p2]
-
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -48,7 +47,6 @@ class MainActivity : AppCompatActivity() {
             Log.v("response", response.toString())
             var server_response= JSONObject(response)
             rates=server_response.getJSONObject("rates")
-
             Log.v("test",rates.getString("USD"))
             for (i in rates.keys()){
                 Log.v("test","$i -> ${rates.getDouble(i)}")
@@ -56,7 +54,5 @@ class MainActivity : AppCompatActivity() {
             }
             adapter.notifyDataSetChanged()
         }
-
-
     }
 }
