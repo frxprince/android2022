@@ -19,8 +19,8 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="264dp"
-        android:layout_height="52dp"
+        android:layout_width="269dp"
+        android:layout_height="118dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
