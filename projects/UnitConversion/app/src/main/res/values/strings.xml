@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">UnitConversion</string>
+    <string name="btn_cm2inch">Cm. to Inch</string>
+    <string name="btn_inch2cm">Inch to Cm.</string>
+    <string name="btn_exit">exit</string>
+    <string name="cm">Cm.</string>
+    <string name="inch">Inch</string>
+</resources>
