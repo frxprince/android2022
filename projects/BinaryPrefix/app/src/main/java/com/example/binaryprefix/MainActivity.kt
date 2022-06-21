@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -15,6 +16,7 @@ import java.text.DecimalFormat
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        overridePendingTransition(R.anim.fade_in,R.anim.fade_out)
         setContentView(R.layout.activity_main)
         val btnInputPrefix=findViewById<Button>(R.id.button)
         val btnOutputPrefix=findViewById<Button>(R.id.button2)
@@ -60,6 +62,10 @@ class MainActivity : AppCompatActivity() {
     val I= Intent(this,InputPrefix::class.java)
         InputPrefixResult.launch(I)
     }
+   btnInputPrefix.startAnimation(AnimationUtils.loadAnimation(this,
+   R.anim.move))
+    btnOutputPrefix.startAnimation(AnimationUtils.loadAnimation(this,
+    R.anim.rotate))
     }
 
 
