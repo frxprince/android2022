@@ -73,9 +73,8 @@ class MainActivity : AppCompatActivity() {
          if (result.resultCode==Activity.RESULT_OK){
           if(image!=null)image?.recycle()
           image=result.data!!.extras!!.getParcelable<Bitmap>("data")
-          var canvas=Canvas()
           var image2=image!!.copy(Bitmap.Config.ARGB_8888, true)
-          canvas.setBitmap(image2)
+             var canvas=Canvas(image2)
           var paint= Paint()
              paint.setColor(Color.RED)
              paint.textSize=20f
