@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.*
 import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.runOnUiThread
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             for (i in rates.keys()){
                currency_list.add(i)
             }
-            adapter.notifyDataSetChanged()
+           runOnUiThread {adapter.notifyDataSetChanged() }
         }
    spinner.onItemSelectedListener=object:AdapterView.OnItemSelectedListener{
        override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
